@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kyle Ashby | UX Designer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <style>
+        :root {
+            --bg-color: #00ADB5;
+            --to-me-bubble: #EEEEEE;
+            --from-me-bubble: #393E46;
+        }
+        a {
+            color: white;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.125em;
+            line-height: 1.5em;
+            background: var(--bg-color);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: [left-side]200px [messages]1fr;
+            grid-gap: 40px;
+            padding: 24px 40px 24px 24px;
+        }
+        .left-side {
+            grid-column: left-side;
+            display: block;
+        }
+
+        .my-pic {
+            position: fixed;
+            min-width: 200px;
+            max-width: 500px;
+        }
+        .messages {
+            display: flex;
+            flex-direction: column;
+            grid-row: 1;
+            grid-column: message / -1;
+        }
+        .message-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+        }
+        .to-me {
+            align-self: flex-end;
+            margin-bottom: 16px;
+            padding: 24px;
+            position: relative;
+            background: var(--to-me-bubble); 
+            border-radius: 1em;
+        }
+        
+        .to-me:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 26px solid transparent;
+            border-left-color: var(--to-me-bubble);
+            border-right: 0;
+            border-top: 0;
+            margin-top: -13px;
+            margin-right: -26px;
+        }
+        
+        .from-me {
+            align-self: flex-start;
+            padding: 24px;
+            position: relative; 
+            background: var(--from-me-bubble); 
+            border-radius: 1em;
+            color: white;
+        }
+
+        .from-me:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 26px solid transparent;
+            border-right-color: var(--from-me-bubble);
+            border-left: 0;
+            border-top: 0;
+            margin-top: -13px;
+            margin-left: -26px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+        <!-- Left side -->
+        <div class="left-side">
+            <!-- My picture -->
+            <div class="my-pic">
+                <img src="assets/picture.png" width="100%" />
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+
+            <!-- About me -->
+            <div class="message-group">
+                <!-- to me -->
+                <div class="to-me" data-aos="zoom-in-left" data-aos-duration="600">
+                     Tell me about yourself.
+                </div>
+                <!-- from me -->
+                <div class="from-me" data-aos="zoom-in-right" data-aos-duration="600">
+                     <p>Hello 👋, My name is Kyle Ashby.</p>
+                     <p>I’m a UX designer currently working @Entrata. I’m passionate about my 👰 wife and 👭 two little girls and I love my job too👨‍💻.</p>
+                     <p>I also do some motion graphic work on the side.</p>
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <div class="message-group">
+                <!-- to me -->
+                <div class="to-me" data-aos="zoom-in-left" data-aos-duration="600">
+                    Do you blog?
+                </div>
+                <!-- from me -->
+                <div class="from-me" data-aos="zoom-in-right" data-aos-duration="600">
+                     I mostly write on <a href="https://medium.com/@kashby">medium @kashby</a>. I mostly write about UX, but also write about scheduling and motion graphics. I plan on setting up a blog someday.
+                </div>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="message-group">
+                <!-- to me -->
+                <div class="to-me" data-aos="zoom-in-left" data-aos-duration="600">
+                    Where can I find your work?
+                </div>
+                <!-- from me -->
+                <div class="from-me" data-aos="zoom-in-right" data-aos-duration="600">
+                    I’m going to start putting work on <a href="https://dribbble.com/kashby">dribbble @kashby</a>. But you can see some of my older work on <a href="https://www.behance.net/kashby">behance @kashby</a>
+                </div>
+            </div>
+
+            <!-- Twitter -->
+            <div class="message-group">
+                <!-- to me -->
+                <div class="to-me" data-aos="zoom-in-left" data-aos-duration="600">
+                    Do you have a twitter?
+                </div>
+                <!-- from me -->
+                <div class="from-me" data-aos="zoom-in-right" data-aos-duration="600">
+                    <a href="https://twitter.com/@_kashby">@_kashby</a> on twitter
+                </div>
+            </div>
+
+            <!-- Motion Reel -->
+            <div class="message-group">
+                <!-- to me -->
+                <div class="to-me" data-aos="zoom-in-left" data-aos-duration="600">
+                    Do you have a motion reel?
+                </div>
+                <!-- from me -->
+                <div class="from-me" data-aos="zoom-in-right" data-aos-duration="600">
+                    I put my reel on <a href="https://vimeo.com/kashby">vimeo</a>.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    AOS.init();
+</script>
